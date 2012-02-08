@@ -26,5 +26,5 @@ obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 *.Cache
-/packages
 !/packages/repositories.config
+/packages
