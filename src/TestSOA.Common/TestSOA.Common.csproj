@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{710C91EC-F9F3-4574-9F80-5019564B382D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestSOA</RootNamespace>
+    <AssemblyName>TestSOA.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetToolsPath>$(SolutionDir)\tools\NuGet</NuGetToolsPath>
+    <RestorePackages>true</RestorePackages>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsInferRequires>False</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsDisjunctiveRequires>False</CodeContractsDisjunctiveRequires>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>True</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsInferRequires>False</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsDisjunctiveRequires>False</CodeContractsDisjunctiveRequires>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>ReleaseRequires</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Annotations\AssertionMethodAttribute.cs" />
+    <Compile Include="Annotations\AspMvcActionAttribute.cs" />
+    <Compile Include="Annotations\AspMvcAreaAttribute.cs" />
+    <Compile Include="Annotations\AspMvcControllerAttribute.cs" />
+    <Compile Include="Annotations\AspMvcMasterAttribute.cs" />
+    <Compile Include="Annotations\AspMvcModelTypeAttribute.cs" />
+    <Compile Include="Annotations\AspMvcPartialViewAttribute.cs" />
+    <Compile Include="Annotations\AspMvcSupressViewErrorAttribute.cs" />
+    <Compile Include="Annotations\AspMvcTemplateAttribute.cs" />
+    <Compile Include="Annotations\AspMvcViewAttribute.cs" />
+    <Compile Include="Annotations\AssertionConditionAttribute.cs" />
+    <Compile Include="Annotations\AssertionConditionType.cs" />
+    <Compile Include="Annotations\BaseTypeRequiredAttribute.cs" />
+    <Compile Include="Annotations\CanBeNullAttribute.cs" />
+    <Compile Include="Annotations\CannotApplyEqualityOperatorAttribute.cs" />
+    <Compile Include="Annotations\ImplicitUseKindFlags.cs" />
+    <Compile Include="Annotations\ImplicitUseTargetFlags.cs" />
+    <Compile Include="Annotations\InstantHandleAttribute.cs" />
+    <Compile Include="Annotations\InvokerParameterNameAttribute.cs" />
+    <Compile Include="Annotations\LocalizationRequiredAttribute.cs" />
+    <Compile Include="Annotations\MeansImplicitUseAttribute.cs" />
+    <Compile Include="Annotations\NotNullAttribute.cs" />
+    <Compile Include="Annotations\PathReferenceAttribute.cs" />
+    <Compile Include="Annotations\PublicAPIAttribute.cs" />
+    <Compile Include="Annotations\PureAttribute.cs" />
+    <Compile Include="Annotations\RazorSectionAttribute.cs" />
+    <Compile Include="Annotations\StringFormatMethodAttribute.cs" />
+    <Compile Include="Annotations\TerminatesProgramAttribute.cs" />
+    <Compile Include="Annotations\UsedImplicitlyAttribute.cs" />
+    <Compile Include="ComponentModel\ComponentLifetimeAttribute.cs" />
+    <Compile Include="ComponentModel\ComponentLifetimeScope.cs" />
+    <Compile Include="ComponentModel\LifetimeScopeTags.cs" />
+    <Compile Include="ComponentModel\RegistrationExtensions.cs" />
+    <Compile Include="DataAccess\IUnitOfWork.cs" />
+    <Compile Include="DomainModel\AggregateRoot.cs" />
+    <Compile Include="DomainModel\DomainObject.cs" />
+    <Compile Include="DomainModel\Entity.cs" />
+    <Compile Include="DomainModel\EntityRef.cs" />
+    <Compile Include="DomainModel\ExternalEntity.cs" />
+    <Compile Include="DomainModel\IAggregateRoot.cs" />
+    <Compile Include="DomainModel\IEntity.cs" />
+    <Compile Include="DomainModel\IEntityRef.cs" />
+    <Compile Include="Messaging\ICommand.cs" />
+    <Compile Include="Messaging\IEvent.cs" />
+    <Compile Include="Messaging\IMessageBus.cs" />
+    <Compile Include="Messaging\IHandleMessages.cs" />
+    <Compile Include="DomainModel\ValueObject.cs" />
+    <Compile Include="DataAccess\IRepository.cs" />
+    <Compile Include="Messaging\IMessage.cs" />
+    <Compile Include="Messaging\IResponse.cs" />
+    <Compile Include="Utilities\DynamicExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(NuGetToolsPath)\nuget.targets" />
+</Project>

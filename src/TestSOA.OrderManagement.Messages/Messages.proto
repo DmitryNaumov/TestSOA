@@ -1,0 +1,37 @@
+message TestCommand
+{
+}
+
+// SubmitOrder
+
+message SubmitOrderCommand
+{
+	required int32 SecurityId = 1;
+}
+
+message SubmitOrderResponse
+{
+}
+
+message OrderSubmittedEvent
+{
+	required int32 OrderId = 1;
+}
+
+// BookOrder
+
+message BookOrderCommand
+{
+	required int32 OrderId = 1;
+	optional string Note = 2;
+}
+
+message BookOrderResponse
+{
+}
+
+message OrderBookedEvent
+{
+	required int32 OrderId = 1;
+	optional string Note = 2;
+}

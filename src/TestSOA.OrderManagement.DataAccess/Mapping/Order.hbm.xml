@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns='urn:nhibernate-mapping-2.2'>
+	<class name="TestSOA.OrderManagement.DomainModel.Order, TestSOA.OrderManagement" schema="OrderManagement" table="`Order`">
+
+		<cache usage="read-write"/>
+
+		<id name="OrderId" type="Int32" unsaved-value="0">
+			<column name="OrderID" sql-type="int" />
+			<generator class="hilo">
+				<param name="column">NextHi</param>
+				<param name="where">TableName='Order'</param>
+				<param name="max_lo">100</param>
+			</generator>
+		</id>
+
+		<property name="Security">
+			<column name="SecurityID" sql-type="int" />
+		</property>
+
+	</class>
+</hibernate-mapping>

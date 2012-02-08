@@ -1,0 +1,16 @@
+// PostSecurity
+
+message PostSecurityCommand
+{
+	required string CUSIP = 1;
+	required string ISIN = 2;
+}
+
+message PostSecurityResponse
+{
+}
+
+message SecurityPostedEvent
+{
+	required int32 SecurityId = 1;
+}

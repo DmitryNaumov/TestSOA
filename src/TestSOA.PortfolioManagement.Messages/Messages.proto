@@ -1,0 +1,15 @@
+// CalculateDirtyPnl
+
+message CalculateDirtyPnlCommand
+{
+	required int32 PositionId = 1;
+}
+
+message CalculateDirtyPnlResponse
+{
+}
+
+message PnlRecalculatedEvent
+{
+	required int32 PositionId = 1;
+}

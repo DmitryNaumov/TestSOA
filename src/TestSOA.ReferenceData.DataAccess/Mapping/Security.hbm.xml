@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns='urn:nhibernate-mapping-2.2'>
+	<class name="TestSOA.ReferenceData.DomainModel.Order, TestSOA.ReferenceData" schema="ReferenceData" table="`Security`">
+
+		<cache usage="read-write"/>
+
+		<id name="SecurityId" type="Int32" unsaved-value="0">
+			<column name="SecurityID" sql-type="int" />
+			<generator class="hilo">
+				<param name="column">NextHi</param>
+				<param name="where">TableName='Security'</param>
+				<param name="max_lo">100</param>
+			</generator>
+		</id>
+
+		<many-to-one name="Underlying" class="TestSOA.DomainModel.ReferenceData.Security">
+			<column name="UnderlyingSecurityID" sql-type="int" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>
