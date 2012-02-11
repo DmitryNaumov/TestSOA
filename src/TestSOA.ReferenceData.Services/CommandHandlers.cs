@@ -3,9 +3,9 @@
 	using TestSOA.Messaging;
 	using TestSOA.ReferenceData.Messages;
 
-	internal sealed class PostSecurityHandler : IHandleMessages<PostSecurityCommand>
+	internal sealed class PostSecurityHandler : IHandleMessages<PostSecurityRequest>
 	{
-		public void Handle(PostSecurityCommand request)
+		public void Handle(PostSecurityRequest request)
 		{
 		}
 	}

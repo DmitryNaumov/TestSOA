@@ -10,10 +10,10 @@
 // Generated from: Messages.proto
 namespace TestSOA.ReferenceData.Messages
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"PostSecurityCommand")]
-  public partial class PostSecurityCommand : global::ProtoBuf.IExtensible, TestSOA.Messaging.ICommand
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"PostSecurityRequest")]
+  public partial class PostSecurityRequest: TestSOA.Messaging.Request, global::ProtoBuf.IExtensible
   {
-    public PostSecurityCommand() {}
+    public PostSecurityRequest() {}
     
     private string _CUSIP;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"CUSIP", DataFormat = global::ProtoBuf.DataFormat.Default)]
@@ -35,7 +35,7 @@ namespace TestSOA.ReferenceData.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"PostSecurityResponse")]
-  public partial class PostSecurityResponse : global::ProtoBuf.IExtensible, TestSOA.Messaging.IResponse
+  public partial class PostSecurityResponse: TestSOA.Messaging.Response, global::ProtoBuf.IExtensible
   {
     public PostSecurityResponse() {}
     
@@ -45,7 +45,7 @@ namespace TestSOA.ReferenceData.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"SecurityPostedEvent")]
-  public partial class SecurityPostedEvent : global::ProtoBuf.IExtensible, TestSOA.Messaging.IEvent
+  public partial class SecurityPostedEvent: TestSOA.Messaging.Event, global::ProtoBuf.IExtensible
   {
     public SecurityPostedEvent() {}
     

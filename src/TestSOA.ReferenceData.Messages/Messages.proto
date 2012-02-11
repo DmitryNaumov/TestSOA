@@ -1,6 +1,6 @@
 // PostSecurity
 
-message PostSecurityCommand
+message PostSecurityRequest
 {
 	required string CUSIP = 1;
 	required string ISIN = 2;

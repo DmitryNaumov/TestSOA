@@ -10,10 +10,10 @@
 // Generated from: Messages.proto
 namespace TestSOA.PortfolioManagement.Messages
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CalculateDirtyPnlCommand")]
-  public partial class CalculateDirtyPnlCommand : global::ProtoBuf.IExtensible, TestSOA.Messaging.ICommand
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CalculateDirtyPnlRequest")]
+  public partial class CalculateDirtyPnlRequest: TestSOA.Messaging.Request, global::ProtoBuf.IExtensible
   {
-    public CalculateDirtyPnlCommand() {}
+    public CalculateDirtyPnlRequest() {}
     
     private int _PositionId;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"PositionId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
@@ -28,7 +28,7 @@ namespace TestSOA.PortfolioManagement.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CalculateDirtyPnlResponse")]
-  public partial class CalculateDirtyPnlResponse : global::ProtoBuf.IExtensible, TestSOA.Messaging.IResponse
+  public partial class CalculateDirtyPnlResponse: TestSOA.Messaging.Response, global::ProtoBuf.IExtensible
   {
     public CalculateDirtyPnlResponse() {}
     
@@ -38,7 +38,7 @@ namespace TestSOA.PortfolioManagement.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"PnlRecalculatedEvent")]
-  public partial class PnlRecalculatedEvent : global::ProtoBuf.IExtensible, TestSOA.Messaging.IEvent
+  public partial class PnlRecalculatedEvent: TestSOA.Messaging.Event, global::ProtoBuf.IExtensible
   {
     public PnlRecalculatedEvent() {}
     

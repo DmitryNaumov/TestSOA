@@ -1,6 +1,6 @@
 ﻿namespace TestSOA.Messaging
 {
-	public interface IEvent : IMessage
+	public abstract class Event : Message
 	{
 	}
 }

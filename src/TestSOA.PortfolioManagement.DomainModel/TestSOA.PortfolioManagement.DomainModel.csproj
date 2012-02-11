@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\Services\PortfolioManagement\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -27,7 +27,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\Release\Services\PortfolioManagement\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -53,15 +53,11 @@
     <Compile Include="AutofacModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestSOA.Common\TestSOA.Common.csproj">
+    <ProjectReference Include="..\TestSOA.Infrastructure\TestSOA.Common.csproj">
       <Project>{710C91EC-F9F3-4574-9F80-5019564B382D}</Project>
       <Name>TestSOA.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(NuGetToolsPath)\nuget.targets" />
-  <Target Name="AfterBuild">
-    <Copy SourceFiles="$(SolutionDir)packages\log4net.1.2.10\lib\2.0\log4net.dll" DestinationFolder="$(TargetDir)log4net\1.2.10.0" />
-    <Copy SourceFiles="$(SolutionDir)packages\log4net.1.2.11\lib\net40-full\log4net.dll" DestinationFolder="$(TargetDir)log4net\1.2.11.0" />
-  </Target>
 </Project>

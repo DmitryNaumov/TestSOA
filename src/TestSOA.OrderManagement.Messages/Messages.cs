@@ -11,7 +11,7 @@
 namespace TestSOA.OrderManagement.Messages
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"TestCommand")]
-  public partial class TestCommand : global::ProtoBuf.IExtensible, TestSOA.Messaging.ICommand
+  public partial class TestCommand: global::ProtoBuf.IExtensible
   {
     public TestCommand() {}
     
@@ -20,10 +20,10 @@ namespace TestSOA.OrderManagement.Messages
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"SubmitOrderCommand")]
-  public partial class SubmitOrderCommand : global::ProtoBuf.IExtensible, TestSOA.Messaging.ICommand
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"SubmitOrderRequest")]
+  public partial class SubmitOrderRequest: TestSOA.Messaging.Request, global::ProtoBuf.IExtensible
   {
-    public SubmitOrderCommand() {}
+    public SubmitOrderRequest() {}
     
     private int _SecurityId;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"SecurityId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
@@ -38,7 +38,7 @@ namespace TestSOA.OrderManagement.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"SubmitOrderResponse")]
-  public partial class SubmitOrderResponse : global::ProtoBuf.IExtensible, TestSOA.Messaging.IResponse
+  public partial class SubmitOrderResponse: TestSOA.Messaging.Response, global::ProtoBuf.IExtensible
   {
     public SubmitOrderResponse() {}
     
@@ -48,7 +48,7 @@ namespace TestSOA.OrderManagement.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"OrderSubmittedEvent")]
-  public partial class OrderSubmittedEvent : global::ProtoBuf.IExtensible, TestSOA.Messaging.IEvent
+  public partial class OrderSubmittedEvent: TestSOA.Messaging.Event, global::ProtoBuf.IExtensible
   {
     public OrderSubmittedEvent() {}
     
@@ -64,10 +64,10 @@ namespace TestSOA.OrderManagement.Messages
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"BookOrderCommand")]
-  public partial class BookOrderCommand : global::ProtoBuf.IExtensible, TestSOA.Messaging.ICommand
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"BookOrderRequest")]
+  public partial class BookOrderRequest: TestSOA.Messaging.Request, global::ProtoBuf.IExtensible
   {
-    public BookOrderCommand() {}
+    public BookOrderRequest() {}
     
     private int _OrderId;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"OrderId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
@@ -91,7 +91,7 @@ namespace TestSOA.OrderManagement.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"BookOrderResponse")]
-  public partial class BookOrderResponse : global::ProtoBuf.IExtensible, TestSOA.Messaging.IResponse
+  public partial class BookOrderResponse: TestSOA.Messaging.Response, global::ProtoBuf.IExtensible
   {
     public BookOrderResponse() {}
     
@@ -101,7 +101,7 @@ namespace TestSOA.OrderManagement.Messages
   }
   
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"OrderBookedEvent")]
-  public partial class OrderBookedEvent : global::ProtoBuf.IExtensible, TestSOA.Messaging.IEvent
+  public partial class OrderBookedEvent: TestSOA.Messaging.Event, global::ProtoBuf.IExtensible
   {
     public OrderBookedEvent() {}
     

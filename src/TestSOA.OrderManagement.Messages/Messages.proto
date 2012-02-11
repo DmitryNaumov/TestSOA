@@ -4,7 +4,7 @@ message TestCommand
 
 // SubmitOrder
 
-message SubmitOrderCommand
+message SubmitOrderRequest
 {
 	required int32 SecurityId = 1;
 }
@@ -20,7 +20,7 @@ message OrderSubmittedEvent
 
 // BookOrder
 
-message BookOrderCommand
+message BookOrderRequest
 {
 	required int32 OrderId = 1;
 	optional string Note = 2;

@@ -6,7 +6,7 @@
 	using TestSOA.OrderManagement.DomainModel;
 	using TestSOA.OrderManagement.Messages;
 
-	internal sealed class CommandHandlers : IHandleMessages<BookOrderCommand>, IHandleMessages<SubmitOrderCommand>
+	internal sealed class CommandHandlers : IHandleMessages<BookOrderRequest>, IHandleMessages<SubmitOrderRequest>
 	{
 		private readonly IOrderRepository _orderRepository;
 		private readonly IOrderFactory _orderFactory;
@@ -17,14 +17,14 @@
 			_orderFactory = orderFactory;
 		}
 
-		public void Handle(BookOrderCommand request)
+		public void Handle(BookOrderRequest request)
 		{
 			var orderRef = new EntityRef<Order>(request.OrderId);
 			var order = _orderRepository.Get(orderRef);
 			order.Book(request.Note);
 		}
 
-		public void Handle(SubmitOrderCommand request)
+		public void Handle(SubmitOrderRequest request)
 		{
 			var securityRef = new EntityRef<Security>(request.SecurityId);
 			var order = _orderFactory.Create(securityRef);

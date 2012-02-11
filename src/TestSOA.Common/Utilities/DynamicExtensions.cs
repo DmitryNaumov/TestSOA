@@ -1,6 +1,6 @@
 ﻿namespace TestSOA.Utilities
 {
-	public static class DynamicExtensions
+	internal static class DynamicExtensions
 	{
 		public static dynamic AsDynamic(this object instance)
 		{

@@ -1,10 +1,12 @@
 ﻿namespace TestSOA.ServiceModel
 {
+	using TestSOA.ComponentModel;
 	using Topshelf.FileSystem;
 	using Topshelf.Messages;
 	using Topshelf.Model;
 
-	internal sealed class ApplicationHost
+	[ComponentLifetime(ComponentLifetimeScope.SingleInstance)]
+	internal sealed class ApplicationHost : IApplicationHost
 	{
 		private readonly IServiceChannel _serviceChannel;
 
@@ -21,10 +23,6 @@
 				typeof(DirectoryMonitorBootstrapper));
 
 			_serviceChannel.Send(message);
-		}
-
-		public void Stop()
-		{
 		}
 	}
 }

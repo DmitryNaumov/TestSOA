@@ -3,9 +3,9 @@
 	using TestSOA.Messaging;
 	using TestSOA.PortfolioManagement.Messages;
 
-	internal sealed class CommandHandlers : IHandleMessages<CalculateDirtyPnlCommand>
+	internal sealed class CommandHandlers : IHandleMessages<CalculateDirtyPnlRequest>
 	{
-		public void Handle(CalculateDirtyPnlCommand request)
+		public void Handle(CalculateDirtyPnlRequest request)
 		{
 		}
 	}

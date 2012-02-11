@@ -1,6 +1,6 @@
 ﻿namespace TestSOA.Messaging
 {
-	public interface IMessage
+	public abstract class Message
 	{
 	}
 }

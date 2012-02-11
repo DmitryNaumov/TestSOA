@@ -1,4 +1,4 @@
-﻿namespace TestSOA.ServiceModel
+﻿namespace TestSOA
 {
 	using System;
 	using System.IO;
@@ -40,6 +40,7 @@
 				Logger.DebugFormat("Container configuration loaded: {0}", configurationFile.FullName);
 			}
 
+			// use container.StartAll() when you are ready
 			return builder.Build(ContainerBuildOptions.IgnoreStartableComponents);
 		}
 	}

@@ -1,6 +1,6 @@
 // CalculateDirtyPnl
 
-message CalculateDirtyPnlCommand
+message CalculateDirtyPnlRequest
 {
 	required int32 PositionId = 1;
 }

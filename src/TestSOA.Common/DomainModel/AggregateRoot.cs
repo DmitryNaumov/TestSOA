@@ -10,24 +10,24 @@ namespace TestSOA.DomainModel
 	public abstract class AggregateRoot<TEntity> : Entity<TEntity>, IAggregateRoot
 		where TEntity : AggregateRoot<TEntity>
 	{
-		private readonly List<IEvent> _changes = new List<IEvent>();
+		private readonly List<Event> _changes = new List<Event>();
 
 		public override IAggregateRoot Root
 		{
 			get { return this; }
 		}
 
-		public ReadOnlyCollection<IEvent> GetUncommittedChanges()
+		internal ReadOnlyCollection<Event> GetUncommittedChanges()
 		{
 			return _changes.AsReadOnly();
 		}
 
-		public void MarkChangesAsCommitted()
+		internal void MarkChangesAsCommitted()
 		{
 			_changes.Clear();
 		}
 
-		public void LoadsFromHistory(IEnumerable<IEvent> events)
+		internal void LoadsFromHistory(IEnumerable<Event> events)
 		{
 			Contract.Requires<ArgumentNullException>(events != null, "events");
 
@@ -37,14 +37,14 @@ namespace TestSOA.DomainModel
 			}
 		}
 
-		protected void ApplyChange(IEvent @event)
+		protected void ApplyChange(Event @event)
 		{
 			Contract.Requires<ArgumentNullException>(@event != null, "event");
 
 			ApplyChange(@event, true);
 		}
 
-		private void ApplyChange(IEvent @event, bool isNew)
+		private void ApplyChange(Event @event, bool isNew)
 		{
 			this.AsDynamic().Apply(@event);
 

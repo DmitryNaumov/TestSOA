@@ -7,7 +7,7 @@
 		[LoaderOptimization(LoaderOptimization.MultiDomainHost)]
 		private static void Main()
 		{
-			Application.Start();
+			ApplicationBootstrapper.Run();
 		}
 	}
 }
