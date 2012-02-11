@@ -63,7 +63,7 @@
     <Compile Include="CommandHandlers.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestSOA.Infrastructure\TestSOA.Common.csproj">
+    <ProjectReference Include="..\TestSOA.Common\TestSOA.Common.csproj">
       <Project>{710C91EC-F9F3-4574-9F80-5019564B382D}</Project>
       <Name>TestSOA.Common</Name>
     </ProjectReference>
